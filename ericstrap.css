@@ -31,6 +31,7 @@ ul li a {
   text-decoration: none;
   font-family:"Helvetica", "Arial";
   color:#ccc;
+  font-size:0.9em;
 }
 
 ul li a:hover {
@@ -144,6 +145,4 @@ a:hover {
 		border-color:#bf3b51;
 		background-color:#bf3b51;
 }
-
-
 
