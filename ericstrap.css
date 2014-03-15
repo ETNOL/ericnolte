@@ -11,6 +11,7 @@ nav {
 	color:#eee;
 	margin: 0% 2% 0% 2%;
 	padding:10px 0 13px 0;
+	overflow:hidden;
 
 }
 
@@ -47,8 +48,14 @@ footer {
 
 }
 
-img {
+.image {
 	margin:0 0 8% 3em;
+}
+
+#pair {
+	position:absolute;
+	margin:0 3% 0 40%;
+
 }
 a {
 	color: #aaa;
