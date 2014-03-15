@@ -1,18 +1,20 @@
+
 body {
+
   font-family:'Helvetica', 'Arial';
   font-color:#fff;
   font-style:none;
   letter-spacing: -1px;
-	font-size:1.2em;
   }
 
 nav {
-	background-color:#222;
+	background-color:#111;
 	color:#eee;
 	margin: 0% 2% 0% 2%;
 	padding:10px 0 13px 0;
 	overflow:hidden;
-
+	position: relative;
+	font-size:1.2em;
 }
 
 li {
@@ -39,16 +41,20 @@ ul li a:hover {
   color:#fff;
 }
 
-footer {
-	border-top: 5px solid #222;
-	padding:1em;
-	margin: 3em 2% 0% 2%;
-	font-size:0.8em;
+.footer {
+
+	border-top: 5px solid #111;
+	padding:0.5em 0em 1em 1em;
+	margin: 3em 2% 2% 2%;
+	font-size:0.9em;
 	 	clear:both;
 
 }
 
 .image {
+	padding: 10px 10px 45px 10px;
+	background-image: url(images/paper.png);
+	background-size:;
 	margin:0 0 8% 3em;
 }
 
@@ -67,6 +73,7 @@ a:hover {
 }
 
  main {
+ 		font-size:1.2em;
  	color:#333;
  	margin: 5% 5% 5% 5%;
  }
@@ -153,3 +160,46 @@ a:hover {
 		background-color:#bf3b51;
 }
 
+.right-footer {
+	margin: 0em 1em 0em 0em;
+}
+
+
+
+/* Credit to the following to one-div.com */
+
+.twitter {
+position: relative;
+font-size: 20px;
+height: 2em;
+width: 2em;
+background: #2C2C2C;
+display: block;
+border-radius: 0.3em;
+}
+.twitter::before {
+left: 0.55em;
+top: 0.4em;
+position: absolute;
+display: block;
+content: "";
+height: 1.2em;
+width: 0.32em;
+background: #2C2C2C;
+border-radius: 0.5em 0.5em 0 0.9em;
+box-shadow: 0 0 0 0.15em #EDEEE8;
+}
+.twitter::after {
+left: 0.87em;
+top: 1.143333em;
+position: absolute;
+display: block;
+content: "";
+height: 0.32em;
+width: 0.62em;
+background: #2C2C2C;
+border-radius: 0 0.4em 0.4em 0;
+box-shadow: 0 -0.57em 0 -0.15em #2C2C2C,-0.2em -0.57em 0 -0.15em #2C2C2C,0 -0.57em 0 0em #EDEEE8;
+border: 0.15em solid #EDEEE8;
+border-left: 0;
+}
