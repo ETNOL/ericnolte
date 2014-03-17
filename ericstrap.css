@@ -1,10 +1,10 @@
 
 body {
 
-  font:400 12pt "Montserrat","Open Sans",Arial,sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-color:#fff;
   font-style:none;
-  letter-spacing: -0.0em;
+  letter-spacing: 0.0em;
   }
 
 nav {
