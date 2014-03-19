@@ -9,7 +9,6 @@ body {
 
 nav {
   width:100%;
-	-webkit-transform:translate(0.8em,0.5em);
   border:1px solid #000;
   border-radius:3px;
 	background-color:#333;
@@ -113,7 +112,7 @@ a:hover {
 }
 .button:hover {
 	background-color: #bbb;
-	border-color:#aaa;
+	border-color:#333;
 }
 
 .title {
@@ -123,7 +122,7 @@ a:hover {
 }
 
 .title a {
-	color:#4AC;
+	color:#81D8D0;
 	font-weight: bold;
 	font-size:1.2em;
 }
@@ -140,25 +139,25 @@ a:hover {
 	background-color:#5fbe61;
 }
 .success:hover {
-	border-color:#5fce61;
+	border-color:#333;
 	background-color:#6fce61;
 }
 
 .info {
-	border-color:#8ad7c8;
-	background-color:#8ad7c8;
+	border-color:#71C8C0;
+	background-color:#81D8D0;
 }
 
 .info:hover {
-	border-color:#8ae7c8;
-	background-color:#8ae7c8;
+	border-color:#333;
+	background-color:#88DFD7;
 }
 .warning {
 		border-color:#af3b55;
 		background-color:#af3b51;
 }
 .warning:hover {
-		border-color:#bf3b51;
+		border-color:#333;
 		background-color:#bf3b51;
 }
 
