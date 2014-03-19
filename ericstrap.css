@@ -116,7 +116,7 @@ a:hover {
 }
 
 .title {
-	padding: 0 3% 0 3%;
+	margin: 0 3% 0 1em;
 	display:inline-block;
 
 }
