@@ -60,7 +60,7 @@ var setMarker = function(lat, long, name, comment, submitter) {
     position: myLatlng,
     map: map,
     title: name,
-    animation: google.maps.Animation.DROP,
+    animation: google.maps.Animation.DROP
   });
 
   var infoWindow = new google.maps.InfoWindow({content: contentString});
