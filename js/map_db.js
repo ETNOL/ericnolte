@@ -12,9 +12,9 @@ PlaceRef.on('value', function(snapshot) {
 
   for (key in locDB) {
     var location = locDB[key].location;
-    var name = location.name;
-    var lat = location.geometry.location.k;
-    var long = location.geometry.location.A;
+    var name = locDB[key].name;
+    var lat = locDB[key].lat;
+    var long = locDB[key].long;
     var comments = locDB[key].comments;
     var submitter = locDB[key].submitter;
     setMarker(lat, long, name, comments, submitter );
@@ -24,22 +24,23 @@ PlaceRef.on('value', function(snapshot) {
 
 
 //google.maps.event.addDomListener(window, 'load', initialize);
+var pushSubmission = function(loc, submittter, comments) {
 
+};
 
 $(Submit).submit(function( event ) {
-	var Location = $('#searchTextField').val();
 	var Submitter = $('#submitter').val();
   var Comments = $('#commentsField').val();
   var place = autocomplete.getPlace();
-
-	var Submission  = PlaceRef.push({
-                      location: place,
-                      submitter:Submitter,
-                      comments:Comments });
 	Submit.hide();
 	Confirmation.text('Thank you for your submission!');
 	event.preventDefault();
-	setMarker(place.geometry.location.k, place.geometry.location.A, place.name, Comments, Submitter);
+  PlaceRef.push({
+                      name:place.name,
+                      lat:place.geometry.location.k,
+                      long:place.geometry.location.A,
+                      submitter:Submitter,
+                      comments:Comments });
 });
 
 var setMarker = function(lat, long, name, comment, submitter) {
