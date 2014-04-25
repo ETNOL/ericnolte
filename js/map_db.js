@@ -7,7 +7,8 @@ var Submit = $('#placeForm');
 var Confirmation = $('#confirmation');
 var map = new google.maps.Map(document.getElementById("map-canvas"),
   mapOptions);
-PlaceRef.on('value', function(snapshot) {
+//Populates map at load //
+PlaceRef.once('value', function(snapshot) {
   locDB = snapshot.val();
 
   for (key in locDB) {
@@ -20,8 +21,18 @@ PlaceRef.on('value', function(snapshot) {
     setMarker(lat, long, name, comments, submitter );
   };
 });
+// Callback to retrieve new entries //
+PlaceRef.on('child_added', function(snapshot) {
+  var child = snapshot.val();
+  var location = child.location;
+  var name = child.name;
+  var lat = child.lat;
+  var long = child.long;
+  var comments = child.comments;
+  var submitter = child.submitter;
+    setMarker(lat, long, name, comments, submitter );
 
-
+});
 
 //google.maps.event.addDomListener(window, 'load', initialize);
 var pushSubmission = function(loc, submittter, comments) {
