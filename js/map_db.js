@@ -66,7 +66,7 @@ var setMarker = function(lat, long, name, comment, submitter) {
   var infoWindow = new google.maps.InfoWindow({content: contentString});
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
+    infoWindow.open(map,marker);
   });
 
   marker.setMap(map);
