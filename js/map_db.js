@@ -1,12 +1,37 @@
+var styleArray = [
+    {
+      stylers: [
+        { hue: "#00ffe6" },
+        { saturation: -20 }
+      ]
+    },{
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+        { lightness: 100 },
+        { visibility: "simplified" }
+      ]
+    },{
+      featureType: "road",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    }
+  ];
+
+
+//Set Up Google Maps//
 var mapOptions = {
   center: new google.maps.LatLng(39.00, -100.00),
   zoom: 4,
 };
-var PlaceRef = new Firebase('https://amber-fire-3032.firebaseIO.com/');
-var Submit = $('#placeForm');
-var Confirmation = $('#confirmation');
 var map = new google.maps.Map(document.getElementById("map-canvas"),
   mapOptions);
+map.setOptions({styles: styleArray});
+//Sets up DB connection //
+var PlaceRef = new Firebase('https://amber-fire-3032.firebaseIO.com/');
+
 //Populates map at load //
 PlaceRef.once('value', function(snapshot) {
   locDB = snapshot.val();
@@ -21,6 +46,7 @@ PlaceRef.once('value', function(snapshot) {
     setMarker(lat, long, name, comments, submitter );
   };
 });
+
 // Callback to retrieve new entries //
 PlaceRef.on('child_added', function(snapshot) {
   var child = snapshot.val();
@@ -34,12 +60,13 @@ PlaceRef.on('child_added', function(snapshot) {
 
 });
 
-//google.maps.event.addDomListener(window, 'load', initialize);
-var pushSubmission = function(loc, submittter, comments) {
+// Form Var //
+var Submit = $('#placeForm');
 
-};
 
+//Fires a DB push on form submit and hides form//
 $(Submit).submit(function( event ) {
+  var Confirmation = $('#confirmation');
 	var Submitter = $('#submitter').val();
   var Comments = $('#commentsField').val();
   var place = autocomplete.getPlace();
@@ -54,8 +81,11 @@ $(Submit).submit(function( event ) {
                       comments:Comments });
 });
 
+
+// Constructor for map markers and info windows //
 var setMarker = function(lat, long, name, comment, submitter) {
 
+  // HTML for Info Windows //
   var contentString = '<div id="content">'+
   '<div id="siteNotice">'+
   '</div>'+
@@ -66,8 +96,10 @@ var setMarker = function(lat, long, name, comment, submitter) {
   '</div>'+
   '</div>';
 
+  // Build lat, long object //
   var myLatlng = new google.maps.LatLng(lat, long);
 
+  // Marker Constructor //
   var marker = new google.maps.Marker({
     position: myLatlng,
     map: map,
@@ -75,12 +107,15 @@ var setMarker = function(lat, long, name, comment, submitter) {
     animation: google.maps.Animation.DROP
   });
 
+  // Info Window Constructor //
   var infoWindow = new google.maps.InfoWindow({content: contentString});
 
+  // Add listener for Window on Marker click //
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.open(map,marker);
   });
 
+  // Set marker on map //
   marker.setMap(map);
 };
 
