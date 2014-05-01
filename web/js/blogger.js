@@ -6,11 +6,10 @@ var bloggerAPI = "https://www.googleapis.com/blogger/v2/blogs/" +
                 apiKey;
 var response = $.getJSON(bloggerAPI).done(
   function ( data ) {
-    $('#content').text(response.responseJSON.items[0].title);
-    $('#content').append($('<a href="' +
-                  response.responseJSON.items[0].url + '">' +
-                  response.responseJSON.items[0].title +'</a>'))
-
-
+    for (var i=0;i < 4;i++) {
+    	$('#post' + i).append($('<a href="' +
+                  response.responseJSON.items[i].url + '">' +
+                  response.responseJSON.items[i].title +'</a>'));
+    };
   }
 );
