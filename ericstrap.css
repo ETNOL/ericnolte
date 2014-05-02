@@ -115,7 +115,6 @@ a:hover {
 .button {
 	border: 1px solid #bbb;
 	border-radius: 3px 4px 5px 3px;
-  box-shadow: 1px 1px 1px #333;
 	background-color: #ccc;
 	display:inline-block;
 	padding:10px 20px 10px 20px;
@@ -224,4 +223,27 @@ border-radius: 0 0.4em 0.4em 0;
 box-shadow: 0 -0.57em 0 -0.15em #2C2C2C,-0.2em -0.57em 0 -0.15em #2C2C2C,0 -0.57em 0 0em #EDEEE8;
 border: 0.15em solid #EDEEE8;
 border-left: 0;
+}
+
+#map-canvas {
+	height:400px;
+	max-height:400px;
+	max-width:800px;
+	margin: 0 auto;
+}
+.form {
+	padding:25px;
+	width:800px;
+	margin: 0 auto;
+	color:#444;
+}
+.header {
+	margin: 0 auto;
+	text-align: center;
+}
+.header {
+		color:#444;
+}
+#submit {
+  margin-left:2px;
 }
