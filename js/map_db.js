@@ -30,22 +30,9 @@ var map = new google.maps.Map(document.getElementById("map-canvas"),
   mapOptions);
 map.setOptions({styles: styleArray});
 //Sets up DB connection //
-var PlaceRef = new Firebase('https://amber-fire-3032.firebaseIO.com/');
+var PlaceRef = new Firebase('https://amber-fire-3032.firebaseIO.com/demoDB');
 
 //Populates map at load //
-PlaceRef.once('value', function(snapshot) {
-  locDB = snapshot.val();
-
-  for (key in locDB) {
-    var location = locDB[key].location;
-    var name = locDB[key].name;
-    var lat = locDB[key].lat;
-    var long = locDB[key].long;
-    var comments = locDB[key].comments;
-    var submitter = locDB[key].submitter;
-    setMarker(lat, long, name, comments, submitter );
-  };
-});
 
 // Callback to retrieve new entries //
 PlaceRef.on('child_added', function(snapshot) {
