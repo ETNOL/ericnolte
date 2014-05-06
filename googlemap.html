@@ -5,11 +5,7 @@
     <script type='text/javascript' src='js/jquery-1.11.0.js'></script>
     <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
-    <script type="text/javascript">
-
-    </script>
   </head>
   <body>
     <div class="header">
@@ -27,13 +23,7 @@
       </form>
       <div id="confirmation"></div>
       <script type='text/javascript' src='js/map_db.js'></script>
-      <script type="text/javascript">
-        var input = document.getElementById('searchTextField');
-        var options = {
-          componentRestrictions: {country: 'us'}
-        };
-        autocomplete = new google.maps.places.Autocomplete(input, options);
-      </script>
+      <script type="text/javascript" src='js/autocomplete.js'></script>
     </div>
   </body>
 </html>
