@@ -75,7 +75,7 @@ body{
 	display:inline-block;
 }
 .top-nav ul li a{
-	color: #165c64;
+	color:#2495a2;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -210,7 +210,7 @@ input[type="search"].sb-search-input {
 	margin:0 auto;
 }
 .head h3{
-	color: #3D3E41;
+	color: #272727;
 	text-transform: uppercase;
 	font-size: 1.8em;
 	font-weight: 900;
@@ -506,6 +506,7 @@ ZOOM DEFAULT
 .services-grid-left{
 	float: left;
 	width: 17%;
+	height:100px;
 	text-align: center;
 }
 .services-grid-left span{
@@ -560,8 +561,11 @@ ZOOM DEFAULT
 /*----*/
 .purches-it h5{
 	font-size: 2em;
-	color: #fff;
+	color: #B6B0B0;
 	font-family: 'rochesterregular';
+}
+.purches-it h5:hover{
+	color:#fff;
 }
 .purches-it{
 	text-align:center;
@@ -759,7 +763,7 @@ input:-ms-placeholder { color:#3D3E41; }
 	text-transform: uppercase;
 }
 .contact-left input[type="submit"]:hover{
-	background: #165c64;
+	background: #f8ae37;
 }
 .contact-left form{
 	padding:1.5em 0;
@@ -807,6 +811,13 @@ input:-ms-placeholder { color:#3D3E41; }
 	text-align: center;
 	margin:0 auto;
 }
+.footer-right h2{
+	color: #FFF;
+	font-size: 1.4em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
 .footer-right ul li{
 	margin-right: 0.5em;
 	display:inline-block;
@@ -846,6 +857,11 @@ input:-ms-placeholder { color:#3D3E41; }
 	background: url(../images/linkedin.png) no-repeat;
 }
 .linkedin span:hover{
+}
+.pinterest span{
+	background: url(../images/pinterest.png) no-repeat;
+}
+.pinterest span:hover{
 }
 /*----//End-footer----*/
 /*----start-copy-right----*/
