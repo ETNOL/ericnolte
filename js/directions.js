@@ -24,7 +24,8 @@ function calcRoute() {
     waypoints: waypts,
     origin:start,
     destination:end,
-    travelMode: google.maps.TravelMode.DRIVING
+    travelMode: google.maps.TravelMode.DRIVING,
+    avoidHighways:true
   };
 
   directionsService.route(request, function(result, status) {
