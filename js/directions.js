@@ -11,14 +11,14 @@ function calcRoute() {
   var start = 'howey-in-the-hills, fl';
   var end = 'san francisco, ca';
   var waypts = [
-    {location:'mobile, al', stopover:true},
-    {location:'new orleans, la', stopover:true},
-    {location:'nuevo laredo, mexico', stopover:true},
-    {location:'denver, co', stopover:true},
-    {location:'grand teton national park, wy', stopover:true},
-    {location:'lewis and clark country, wa', stopover:true},
-    {location:'portland, or', stopover:true},
-    {location:'newport, or', stopover:true},
+    {location:'mobile, al', stopover:false },
+    {location:'new orleans, la', stopover:false},
+    {location:'nuevo laredo, mexico', stopover:false},
+    {location:'denver, co', stopover:false},
+    {location:'grand teton national park, wy', stopover:false},
+    {location:'lewis and clark country, wa', stopover:false},
+    {location:'portland, or', stopover:false},
+    {location:'newport, or', stopover:false},
   ];
   var request = {
     waypoints: waypts,
