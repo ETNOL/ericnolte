@@ -30,6 +30,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					$('nav#menu-left').mmenu();
 				});
 		</script>
+		<script type="text/javascript">
+		// Popup window code
+		function newPopup(url) {
+			popupWindow = window.open(
+			url,'popUpWindow','height=700,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+		</script>
 		<!--//768px-menu-->
 		 <!--strat-slider-->
 	    <link rel="stylesheet" type="text/css" href="web/css/style2.css" />
@@ -61,7 +68,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="header-left">
 					<!--start-logo-->
 					<div class="logo">
-						<a href="index.html"><img src="web/images/logo.png" title="Adventure" /> </a>
+						<a href="index.html"><img src="web/images/logo.png" alt="Adventure for Breakfast" /> </a>
 					</div>
 					<!--//End-logo-->
 				</div>
@@ -137,15 +144,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="head">
 						<span> </span>
 						<h3>Get to know us</h3>
-						<p>We're Ariel and Eric (Yep, just like in the Little Mermaid). Winston is our Cavalier King Charles.</p><p>We just sold our house, and now we are buying an Airstream travel trailer.</p>
+						<p>We're Ariel and Eric (Yep, just like in the Little Mermaid). Winston is our Cavalier King Charles.</p><p>We just sold our house, we're selling our <a href="JavaScript:newPopup('http://ericnolte.com/wags.html');">Jeep</a> and soon we will be buying an Airstream travel trailer.</p>
 						<p>Begining in June 2014 we are leaving our cushy life in Howey in the Hills, FL in search of an adventure out West.</p>
-						<p>If this is your first time here <a href="http://www.adventureforbreakfast.com/2014/02/and-so-it-begins.html" >Check this out!</a></p>
+						<p>If this is your first time here <a href="JavaScript:newPopup('http://www.adventureforbreakfast.com/2014/02/and-so-it-begins.html');">check this out!</a></p>
 					</div>
 					<div class="about-grids">
 						<div class="about-grid">
 							<div class= "circularariel"></div>
 							<h3>Ariel</h3>
-							<p>Ariel once asked Eric for some adjectives that would accurately describe her. He replied with the <a href="web/images/adj.jpg">following... </a> </p>
+							<p>Ariel once asked Eric for some adjectives that would accurately describe her. He replied with the
+							<a href="JavaScript:newPopup('web/images/adj.jpg');">following...</a></p>
 						</div>
 						<div class="about-grid">
 							<div class= "circulareric"></div>
@@ -505,7 +513,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="wrap">
 				<div class="footer-left">
 					<h2>If you're feeling social <span>we would love to hear from you</span></h2>
-					
+
 				</div>
 				<div class="footer-right">
 					<h2>Ariel</h2>
@@ -517,7 +525,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a class="linkedin" href="http://www.linkedin.com/pub/eric-nolte/82/829/286"><span> </span></a></li>
 					</ul>
 						<h2>Eric</h2>
-					<ul>	
+					<ul>
 						<li><a class="twitter" href="https://twitter.com/Eric_Nolte"><span> </span></a></li>
 						<li><a class="spotify" href="#"><span> </span></a></li>
 						<!--<li><a class="youtube" href="#"><span> </span></a></li>-->

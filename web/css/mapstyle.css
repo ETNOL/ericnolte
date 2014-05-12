@@ -76,3 +76,13 @@ button-active,
 button:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
 }
+
+@media only screen and (max-width:320px) and (min-width:240px) {
+    #placeForm input {
+        max-width:250px;
+    }
+
+    .services {
+        padding-top:6em;
+    }
+}
