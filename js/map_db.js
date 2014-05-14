@@ -105,6 +105,8 @@ var setMarker = function(lat, long, name, comment, submitter) {
   // Set marker on map //
   marker.setMap(map);
 };
-
+google.maps.event.addListener(map, 'zoom_changed', function() {
+     if (map.getZoom() < zoomSetting) map.setZoom(zoomSetting);
+   });
 
 
