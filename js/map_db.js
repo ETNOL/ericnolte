@@ -1,3 +1,8 @@
+var viewportWidth = $(window).width();
+var zoomSetting = 4
+if (viewportWidth < 500) {
+    zoomSetting = 3;
+  };
 var styleArray = [
     {
       stylers: [

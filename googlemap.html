@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' href='ericstrap.css' type='text/css'>
+    <link rel='stylesheet' href='css/ericstrap.css' type='text/css'>
     <script type='text/javascript' src='js/jquery-1.11.0.js'></script>
     <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -15,6 +15,8 @@
     <div id="map-canvas">
     </div>
     <div class="form">
+      <div id="login">
+      </div>
       <form id='placeForm'>
         Place: <input id="searchTextField" type="text" size="87" placeholder="Add your location..."><br>
         Comments: <input id="commentsField" type="text" size="80" placeholder="Add comments..."><br>
@@ -25,6 +27,7 @@
       <script type='text/javascript' src='js/map_db.js'></script>
       <script type='text/javascript' src='js/directions.js'></script>
       <script type="text/javascript" src='js/autocomplete.js'></script>
+      <script type="text/javascript" src='js/fbauth.js'></script>
     </div>
   </body>
 </html>

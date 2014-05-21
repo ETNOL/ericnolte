@@ -185,7 +185,10 @@ a:hover {
 	margin: 0em 1em 0em 0em;
 }
 
-
+.angularRed {
+	background-color:rgb(229, 42, 58);
+	border-color:rgb(179, 177, 177);
+}
 
 /* Credit to the following to one-div.com */
 

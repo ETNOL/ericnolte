@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app="ericularApp" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.8/angular.js'></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-50130061-1', 'ericnolte.com');
+          ga('require', 'displayfeatures');
+          ga('send', 'pageview');
+
+        </script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/ericstrap.css">
+    </head>
+    <body ng-controller="EricularController as ericular">
+        <nav>
+            <div class="title">
+                <a id='title' href="http://ericnolte.com">eric nolte</a>
+            </div>
+            <div class='inner-nav'>
+              <ul>
+                <li><a href='projects.html'>Projects</a></li>
+                <li><a href='https://medium.com/@Eric_Nolte'>Blog</a></li>
+                <li><a href='wags.html'>The wags</a></li>
+
+              </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="center">
+            <img height="48" width="48" alt="Angular icon" src='images/angular.png' ng-click="ericular.toggleForm()">
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <p>Angular features two-way data binding</p>
+            <form>
+                <input size="31" ng-model="ericular.form">
+            </form>
+            <br />
+            <p>Angular can bind a callback to any object when clicked</p>
+            <button class="button angularRed" href="" ng-click="ericular.clearForm()">Click to clear form</button>
+            <p>A button seems logical but the callback can be actually be binded to any element.<br> Try clicking on the angular image at the top!</p>
+            <p> Angular has many extremely useful directives built in. <br> Directives provide functions in your applications.</p>
+            <h3 ng-hide="ericular.formEmpty()">This paragraph element only hides when the form is empty...</h3>
+            <h3 ng-show="ericular.formEmpty()">...and this paragraph element only shows when the form is empty!</h3>
+            <p>{{ericular.form}}</p>
+
+        </div>
+
+
+        <script type='text/javascript' src='js/ericularapp.js'></script>
+    </body>
+</html>
