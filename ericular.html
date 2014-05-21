@@ -24,22 +24,10 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/ericstrap.css">
     </head>
-    <body ng-controller="EricularController as ericular">
-        <nav>
-            <div class="title">
-                <a id='title' href="http://ericnolte.com">eric nolte</a>
-            </div>
-            <div class='inner-nav'>
-              <ul>
-                <li><a href='projects.html'>Projects</a></li>
-                <li><a href='https://medium.com/@Eric_Nolte'>Blog</a></li>
-                <li><a href='wags.html'>The wags</a></li>
-
-              </ul>
-            </div>
-        </nav>
+    <body >
+        <nav-bar></nav-bar>
         <br>
-        <div class="center">
+        <div class="center" ng-controller="EricularController as ericular">
             <img height="48" width="48" alt="Angular icon" src='images/angular.png' ng-click="ericular.toggleForm()">
             <!--[if lt IE 7]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
