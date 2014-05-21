@@ -2,28 +2,28 @@
 
 	var app = angular.module("ericularApp", []);
 
-	var form;
-
 	app.controller("EricularController", function(){
 
-		this.form = "Type here to change the bottom paragraph!";
-
-		this.clearForm = function(){
-			this.form = "";
+		this.form = "Type here to change the right paragraph!";
+		this.text = "Click to change!";
+		this.password ="The password is...";
+		this.option = false;
+		this.changeText = function(){
+			this.text = "You triggered a callback!";
 			console.log("Form clear callback has been called");
 		};
 
-		this.toggleForm = function() {
-			if (this.form === "") {
-				this.form ="Here's some free content!";
+		this.togglePassword = function() {
+			if (this.password === "The password is...") {
+				this.password ="Angular.js!";
 			}
 			else {
-				this.form = "";
+				this.password = "The password is...";
 			}
 		};
 
-		this.formEmpty = function() {
-			return this.form.length === 0;
+		this.toggleOption = function() {
+			this.option = true;
 		}
 
 	});
@@ -35,6 +35,12 @@
 		};
 	});
 
+	app.directive("customDirective", function() {
+		return {
+			restrict:"E",
+			templateUrl:"custom-directive.html"
+		};
+	});
 
 })();
 

@@ -21,32 +21,81 @@
           ga('send', 'pageview');
 
         </script>
+        <link rel="stylesheet" href="css/simplegrid.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/ericstrap.css">
     </head>
     <body >
-        <nav-bar></nav-bar>
+        <!--<nav-bar><!--My entire nav bar is extacted into nav-bar.html</nav-bar>-->
         <br>
         <div class="center" ng-controller="EricularController as ericular">
-            <img height="48" width="48" alt="Angular icon" src='images/angular.png' ng-click="ericular.toggleForm()">
-            <!--[if lt IE 7]>
-                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-            <![endif]-->
-            <p>Angular features two-way data binding</p>
-            <form>
-                <input size="31" ng-model="ericular.form">
-            </form>
-            <br />
-            <p>Angular can bind a callback to any object when clicked</p>
-            <button class="button angularRed" href="" ng-click="ericular.clearForm()">Click to clear form</button>
-            <p>A button seems logical but the callback can be actually be binded to any element.<br> Try clicking on the angular image at the top!</p>
-            <p> Angular has many extremely useful directives built in. <br> Directives provide functions in your applications.</p>
-            <h3 ng-hide="ericular.formEmpty()">This paragraph element only hides when the form is empty...</h3>
-            <h3 ng-show="ericular.formEmpty()">...and this paragraph element only shows when the form is empty!</h3>
-            <p>{{ericular.form}}</p>
+                    <div >
+                        <img height="48" width="48" alt="Angular icon" src='images/angular.png' ng-click="ericular.togglePassword()">
+                        <!--[if lt IE 7]>
+                        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+                        <![endif]-->
+                    </div><br>
 
-        </div>
+                    <div id="bindingFeature" class="photo grid grid-pad">
+                        <div class="col-4-12">
+                            <p><h3>Two-way data binding</h3></p>
+                        </div>
+                        <div class="col-4-12">
+                            <p>
+                                <form>
+                                    <input size="32" ng-model="ericular.form">
+                                </form>
+                            </p>
+                        </div>
+                        <div class="col-4-12">
+                            <p>{{ericular.form}}</p>
+                        </div>
+                    </div>
 
+                    <div id="callbackFeature" class="photo grid grid-pad">
+                        <div class="col-4-12">
+                            <h4>Bind a callback to any object when clicked</h4>
+                        </div>
+                        <div class="col-4-12">
+                            <button class="button angularRed" href="" ng-click="ericular.changeText()">Click for callback</button>
+                        </div>
+                        <div class="col-4-12">
+                            <p>{{ericular.text}}</p>
+                        </div>
+                    </div>
+
+                    <div id="callbackFeature" class="photo grid grid-pad">
+                        <div class="col-4-12">
+                            <h4>And I mean any object.</h4>
+                        </div>
+                        <div class="col-4-12">
+                             <p>Try clicking on the angular image at the top!</p>
+                        </div>
+                        <div class="col-4-12">
+                            <p>{{ericular.password}}</p>
+                        </div>
+                    </div>
+
+                    <div id="directivesFeature" class="photo grid grid-pad">
+                        <div class="col-4-12">
+                            <h4>Built-in Directives</h4>
+                        </div>
+                        <div class="col-4-12">
+                            <p>There are numerous pre-built directives in Angular such as ng-show and ng-hide</p>
+                        </div>
+                        <div ng-click="ericular.toggleOption()" class="col-4-12">
+                             <p ng-hide="ericular.option">
+                                This paragraph element only hides when you click it...
+                            </p>
+                        </div>
+                        <div class="col-4-12">
+                            <p ng-show="ericular.option">
+                                ...and this paragraph element only shows after you've clicked!
+                            </p>
+                        </div>
+                    </div>
+                    <custom-directive></custom-directive>
+                </div>
 
         <script type='text/javascript' src='js/ericularapp.js'></script>
     </body>
