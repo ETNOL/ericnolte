@@ -1,9 +1,11 @@
 <!doctype html>
+<html ng-app="ericularApp">
   <head>
   	<!--why are you looking at my head?-->
   	<title>Eric Nolte</title>
     <meta charset="UTF-8">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'></script>
     <link rel='stylesheet' href='css/ericstrap.css' type='text/css'>
     <link rel='stylesheet' href='css/normalize.css' type='text/css'>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -22,35 +24,12 @@
   </head>
 
   <body>
-	 	<nav>
-	    	<div class="title">
-	      <a id='title' href="/">eric nolte</a>
-	    	</div>
-	    <div class='inner-nav'>
-	      <ul>
-	        <li><a href='projects.html'>Projects</a></li>
-	        <li><a href='https://medium.com/@Eric_Nolte'>Blog</a></li>
-	        <li><a href='wags.html'>The wags</a></li>
 
-	      </ul>
-	    </div>
-	  </nav>
-	 	<main>
-	 		<section>
-	 		 	<div class="right photo" id="main-photo">
-	 		 		<img height="450" width="320" src='images/oldmaneric.jpg' alt='Old man Eric'>
-	 		 	</div>
-	 			<div class='center right content'>
-		 			Mechanic, brewer, <a href="http://www.devbootcamp.com">boot</a>, musician, web developer, and husband. Currently I am crossing the country with my wife, <a href="http://www.adventureforbreakfast.com/">Ariel</a>, in search of new adventure. Please <a href="mailto:amishe@gmail.com">contact me</a> if you'd like to pair program or have a drink and eat breakfast food together.
-		 		</div>
-	 		</section>
-	  </main>
-      <div class="footer">
-          hosted with <a href='http://www.github.com'>Github pages</a>
-          <a class="twitter right right-footer" href="https://twitter.com/Eric_Nolte"></a>
-          <a id='pair' class="right-footer right" href="mailto:amishe@gmail.com" title="Pair program with me!"><img width="100" height="30" src="http://pairprogramwith.me/badge.png"
-        alt="Pair program with me!" />
-        </a>
-      </div>
+    <nav-bar></nav-bar>
+    <index-main></index-main>
+    <footer></footer>
+
+    <script type='text/javascript' src='js/ericularapp.js'></script>
+
   </body>
 </html>

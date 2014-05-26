@@ -42,5 +42,26 @@
 		};
 	});
 
+	app.directive("footer", function() {
+		return {
+			restrict:"E",
+			templateUrl:"footer.html"
+		};
+	});
+
+	app.directive("indexMain", function() {
+		return {
+			restrict:"E",
+			templateUrl:"indexMain.html"
+		};
+	};
+
+		app.directive("projectsMain", function() {
+		return {
+			restrict:"E",
+			templateUrl:"projectsMain.html"
+		};
+	};
+
 })();
 
