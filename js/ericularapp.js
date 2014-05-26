@@ -54,14 +54,14 @@
 			restrict:"E",
 			templateUrl:"indexMain.html"
 		};
-	};
+	});
 
 		app.directive("projectsMain", function() {
 		return {
 			restrict:"E",
 			templateUrl:"projectsMain.html"
 		};
-	};
+	});
 
 })();
 
