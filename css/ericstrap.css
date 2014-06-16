@@ -250,3 +250,8 @@ border-left: 0;
 #submit {
   margin-left:2px;
 }
+
+#ericPhoto {
+	height:450px;
+	width:320px;
+}

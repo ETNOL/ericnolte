@@ -65,12 +65,18 @@ $(Submit).submit(function( event ) {
 	Submit.hide();
 	Confirmation.text('Thank you for your submission!');
 	event.preventDefault();
-  PlaceRef.push({
+  if (!htmlUnsafe(Submitter) && !htmlUnsafe(Comments)) {
+    PlaceRef.push({
                       name:place.name,
                       lat:place.geometry.location.k,
                       long:place.geometry.location.A,
                       submitter:Submitter,
                       comments:Comments });
+    Submit.hide();
+  }
+  else {
+    alert("Hey! Please do not use symbols for your comments and name, dude!")
+  }
 });
 
 
@@ -113,5 +119,11 @@ var setMarker = function(lat, long, name, comment, submitter) {
 google.maps.event.addListener(map, 'zoom_changed', function() {
      if (map.getZoom() < zoomSetting) map.setZoom(zoomSetting);
    });
+
+
+function htmlUnsafe (string) {
+  var noSymbols = /\W/;
+  return noSymbols.test(string);
+}
 
 
