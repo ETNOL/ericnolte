@@ -65,7 +65,7 @@ $(Submit).submit(function( event ) {
 	Submit.hide();
 	Confirmation.text('Thank you for your submission!');
 	event.preventDefault();
-  if (htmlUnsafe(Submitter) && htmlUnsafe(Comments)) {
+  if (htmlSafe(Submitter) && htmlSafe(Comments)) {
     PlaceRef.push({
                       name:place.name,
                       lat:place.geometry.location.k,
@@ -121,7 +121,7 @@ google.maps.event.addListener(map, 'zoom_changed', function() {
    });
 
 
-function htmlUnsafe (string) {
+function htmlSafe (string) {
   var noSymbols = /\W/;
   return !noSymbols.test(string);
 }
