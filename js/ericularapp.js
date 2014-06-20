@@ -31,35 +31,35 @@
 	app.directive("navBar", function(){
 		return {
 			restrict:"E",
-			templateUrl:"nav-bar.html"
+			templateUrl:"../layouts/nav-bar.html"
 		};
 	});
 
 	app.directive("customDirective", function() {
 		return {
 			restrict:"E",
-			templateUrl:"custom-directive.html"
+			templateUrl:"../custom-directive.html"
 		};
 	});
 
 	app.directive("footer", function() {
 		return {
 			restrict:"E",
-			templateUrl:"footer.html"
+			templateUrl:"../layouts/footer.html"
 		};
 	});
 
 	app.directive("indexMain", function() {
 		return {
 			restrict:"E",
-			templateUrl:"indexMain.html"
+			templateUrl:"../indexMain.html"
 		};
 	});
 
 		app.directive("projectsMain", function() {
 		return {
 			restrict:"E",
-			templateUrl:"projectsMain.html"
+			templateUrl:"../projectsMain.html"
 		};
 	});
 

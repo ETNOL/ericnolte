@@ -25,8 +25,8 @@ $("button").click(
 	else {
 		if (entry.length < 10 ) {
 			$('#entryField').text(entry + value);
-		};
-	};
+		}
+	}
 });
 
 function validate (entry) {
@@ -42,6 +42,6 @@ function validate (entry) {
   		$('#entryField').text("").show()
   	});
   }
-};
+}
 
 

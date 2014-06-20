@@ -1,15 +1,16 @@
 var viewportWidth = $(window).width();
-var zoomSetting = 4
+var zoomSetting = 4;
 if (viewportWidth < 500) {
     zoomSetting = 3;
-  };
+}
 var styleArray = [
     {
       stylers: [
         { hue: "#00ffe6" },
         { saturation: -20 }
       ]
-    },{
+    },
+    {
       featureType: "road",
       elementType: "geometry",
       stylers: [
@@ -29,7 +30,7 @@ var styleArray = [
 //Set Up Google Maps//
 var mapOptions = {
   center: new google.maps.LatLng(39.00, -100.00),
-  zoom: 4,
+  zoom: 4
 };
 var map = new google.maps.Map(document.getElementById("map-canvas"),
   mapOptions);
@@ -55,6 +56,11 @@ PlaceRef.on('child_added', function(snapshot) {
 // Form Var //
 var Submit = $('#placeForm');
 
+// Checks a string for symbols and returns true if none are present //
+function htmlSafe (string) {
+  var noSymbols = /\W/;
+  return !noSymbols.test(string);
+}
 
 //Fires a DB push on form submit and hides form//
 $(Submit).submit(function( event ) {
@@ -121,9 +127,5 @@ google.maps.event.addListener(map, 'zoom_changed', function() {
    });
 
 
-function htmlSafe (string) {
-  var noSymbols = /\W/;
-  return !noSymbols.test(string);
-}
 
 
