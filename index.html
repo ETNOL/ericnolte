@@ -9,19 +9,28 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='css/ericstrap.css' type='text/css'>
     <link rel='stylesheet' href='css/normalize.css' type='text/css'>
+    <link rel='stylesheet' href='../css/keypad.css' type='text/css'>
+    <link rel="stylesheet" href="../css/simplegrid.css">
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'></script>
     <script type='text/javascript' src='../js/analytics.js'></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+
+
   </head>
 
   <body ng-controller="BodyController as body">
     <side-menu></side-menu>
-    <nav-bar></nav-bar>
-    <div ng-click="body.hideMenu()">
-      <index-main ng-show="body.index()"></index-main>
-      <projects-main ng-show="body.projects()"></projects-main>
-      <footer></footer>
-    </div>
-      <script type='text/javascript' src='js/ericularapp.js'></script>
+    <div id="fade-wrapper" class={{body.fade}}>
+      <nav-bar></nav-bar>
+      <div ng-click="body.hideMenu()">
+        <index-main ng-show="body.index()" ></index-main>
+        <keypad ng-show="body.keypad()"></keypad>
+        <google-map ng-show="body.googleMap()"></google-map>
+        <ericular ng-show="body.ericular()"></ericular>
+        <footer></footer>
+      </div>
+        <script type='text/javascript' src='js/ericularapp.js'></script>
     </div>
   </body>
 </html>

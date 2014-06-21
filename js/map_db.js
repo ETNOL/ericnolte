@@ -1,3 +1,5 @@
+var googleMap = function()  {
+console.log("this fired");
 var viewportWidth = $(window).width();
 var zoomSetting = 4;
 if (viewportWidth < 500) {
@@ -28,31 +30,30 @@ var styleArray = [
 
 
 //Set Up Google Maps//
-var mapOptions = {
-  center: new google.maps.LatLng(39.00, -100.00),
-  zoom: 4
-};
-var map = new google.maps.Map(document.getElementById("map-canvas"),
-  mapOptions);
-map.setOptions({styles: styleArray});
-//Sets up DB connection //
-var PlaceRef = new Firebase('https://amber-fire-3032.firebaseIO.com/demoDB');
+  var mapOptions = {
+    center: new google.maps.LatLng(39.00, -100.00),
+    zoom: 4
+  };
+  var map = new google.maps.Map(document.getElementById("map-canvas"),
+    mapOptions);
+  map.setOptions({styles: styleArray});
+  //Sets up DB connection //
+  var PlaceRef = new Firebase('https://amber-fire-3032.firebaseIO.com/demoDB');
 
-//Populates map at load //
+  //Populates map at load //
 
-// Callback to retrieve new entries //
-PlaceRef.on('child_added', function(snapshot) {
-  var child = snapshot.val();
-  var location = child.location;
-  var name = child.name;
-  var lat = child.lat;
-  var long = child.long;
-  var comments = child.comments;
-  var submitter = child.submitter;
-    setMarker(lat, long, name, comments, submitter );
+  // Callback to retrieve new entries //
+  PlaceRef.on('child_added', function(snapshot) {
+    var child = snapshot.val();
+    var location = child.location;
+    var name = child.name;
+    var lat = child.lat;
+    var long = child.long;
+    var comments = child.comments;
+    var submitter = child.submitter;
+      setMarker(lat, long, name, comments, submitter );
 
-});
-
+  });
 // Form Var //
 var Submit = $('#placeForm');
 
@@ -127,5 +128,5 @@ google.maps.event.addListener(map, 'zoom_changed', function() {
    });
 
 
-
+};
 

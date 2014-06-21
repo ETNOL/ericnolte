@@ -30,45 +30,93 @@
 		};
 	});
 
-	app.directive("projectsMain", function() {
+	app.directive("keypad", function() {
 		return {
 			restrict:"E",
-			templateUrl:"../projectsMain.html"
-		};
+			templateUrl:"../projects/keypad.html"
+		}
 	});
 
 	app.directive("sideMenu", function() {
-			return {
-				restrict:"E",
-				templateUrl:"../layouts/sidemenu.html"
-			}
-		});
+		return {
+			restrict:"E",
+			templateUrl:"../layouts/sidemenu.html"
+		}
+	});
+
+	app.directive("googleMap", function() {
+		return  {
+			restrict:"E",
+			templateUrl:"../projects/googlemap.html"
+		}
+	})
+
+	app.directive("ericular", function() {
+		return {
+			restrict:"E",
+			templateUrl:"../projects/ericular.html"
+		}
+	})
 
 	app.controller("BodyController", function() {
 		var self = this;
 		this.main = "index";
 		this.sidemenu = "sideMenuClose";
+		this.fade = "no-fade";
+		this.mapLoad = false;
+		this.projectsMenu = function() {
+			this.sidemenu = "sideMenuOpen";
+			this.fade = "fade";
+		}
 
 		this.hideMenu = function() {
 			if ( self.sidemenu === "sideMenuOpen" ) {
 				self.sidemenu = "sideMenuClose";
-				console.log("menu closed");
+				this.fade = "no-fade";
 			}
 		}
 
 		this.setIndex = function() {
 			this.main = "index";
-		}
-		this.setProjects = function() {
-			this.sidemenu = "sideMenuOpen";
-			console.log("Menu Open");
-		};
 
+		}
 		this.index = function() {
 			return this.main === "index";
 		}
-		this.projects = function() {
-			this.sidemenu === "sideMenuOpen";
+
+		this.setKeypad = function() {
+			this.fade = "no-fade";
+			this.main = "keypad";
+			this.sidemenu = "sideMenuClose";
+
+		}
+
+		this.keypad = function() {
+			return this.main === "keypad";
+		}
+
+		this.setGoogleMap = function() {
+			this.fade = "no-fade";
+			this.main = "googlemap";
+			this.sidemenu = "sideMenuClose";
+			if (this.mapLoad === false) {
+				googleMap();
+				this.mapLoad = true;
+			};
+		}
+
+		this.googleMap = function() {
+			return this.main === "googlemap";
+		}
+
+		this.setEricular = function() {
+			this.fade = "no-fade";
+			this.main = "ericular";
+			this.sidemenu = "sideMenuClose";
+		}
+
+		this.ericular = function() {
+			return this.main === "ericular";
 		}
 
 	});

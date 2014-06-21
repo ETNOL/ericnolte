@@ -1,5 +1,5 @@
 
-var $button = "<button></button>";
+var $button = "<button class='keypadButton'></button>";
 var $keypad = $("#keypad");
 
 

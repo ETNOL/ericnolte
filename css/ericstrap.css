@@ -186,43 +186,16 @@ a:hover {
 	border-color:rgb(179, 177, 177);
 }
 
-/* Credit to the following to one-div.com */
+
 
 .twitter {
 position: relative;
-font-size: 20px;
 height: 2em;
 width: 2em;
-background: #2C2C2C;
 display: block;
 border-radius: 0.3em;
 }
-.twitter::before {
-left: 0.55em;
-top: 0.4em;
-position: absolute;
-display: block;
-content: "";
-height: 1.2em;
-width: 0.32em;
-background: #2C2C2C;
-border-radius: 0.5em 0.5em 0 0.9em;
-box-shadow: 0 0 0 0.15em #EDEEE8;
-}
-.twitter::after {
-left: 0.87em;
-top: 1.143333em;
-position: absolute;
-display: block;
-content: "";
-height: 0.32em;
-width: 0.62em;
-background: #2C2C2C;
-border-radius: 0 0.4em 0.4em 0;
-box-shadow: 0 -0.57em 0 -0.15em #2C2C2C,-0.2em -0.57em 0 -0.15em #2C2C2C,0 -0.57em 0 0em #EDEEE8;
-border: 0.15em solid #EDEEE8;
-border-left: 0;
-}
+
 
 #map-canvas {
 	height:400px;
@@ -275,4 +248,13 @@ transform:translate3d(0,0,0);
 .wrapper {
 	height:100%;
 	width:100%;
+}
+
+.fade {
+	transition:all 0.5s;
+	background-color: #fff;
+	opacity:0.6;
+}
+.no-fade {
+	transition:all 0.3s;
 }
