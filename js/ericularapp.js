@@ -49,6 +49,23 @@
 		};
 	});
 
+	app.controller("BodyController", function() {
+		this.main = "index";
+
+		this.setIndex = function() {
+			this.main = "index";
+		}
+		this.setProjects = function() {
+			this.main = "projects";
+		}
+		this.index = function() {
+			return this.main === "index";
+		}
+		this.projects = function() {
+			return this.main === "projects";
+		}
+	});
+
 	app.directive("indexMain", function() {
 		return {
 			restrict:"E",
