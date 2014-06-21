@@ -2,6 +2,7 @@
 <html ng-app="ericularApp">
   <head>
   	<title>Eric Nolte</title>
+    <script type='text/javascript' src='../js/jquery.min.js'></script>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -13,13 +14,14 @@
   </head>
 
   <body ng-controller="BodyController as body">
-
+    <side-menu></side-menu>
     <nav-bar></nav-bar>
-    <index-main ng-show="body.index()"></index-main>
-    <projects-main ng-show="body.projects()"></projects-main>
-    <footer></footer>
-
-    <script type='text/javascript' src='js/ericularapp.js'></script>
-
+    <div ng-click="body.hideMenu()">
+      <index-main ng-show="body.index()"></index-main>
+      <projects-main ng-show="body.projects()"></projects-main>
+      <footer></footer>
+    </div>
+      <script type='text/javascript' src='js/ericularapp.js'></script>
+    </div>
   </body>
 </html>
