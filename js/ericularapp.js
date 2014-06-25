@@ -58,6 +58,13 @@
 		}
 	})
 
+	app.directive("testPage", function() {
+		return {
+			restrict:"E",
+			templateUrl:"../projects/test.html"
+		}
+	})
+
 	app.controller("BodyController", function() {
 		var self = this;
 		this.main = "index";
@@ -119,6 +126,16 @@
 			return this.main === "ericular";
 		}
 
+		this.setTestPage = function() {
+			this.fade = "no-fade";
+			this.main = "testpage";
+			this.sidemenu = "sideMenuClose";
+		}
+
+		this.testPage = function() {
+			return this.main === "testpage";
+		}
+
 	});
 
 
@@ -146,7 +163,6 @@
 			this.option = true;
 		}
 	});
-
 
 })();
 
