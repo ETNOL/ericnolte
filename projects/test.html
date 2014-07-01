@@ -1,28 +1,24 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>The Test Page</title>
-		<link href="../css/ericstrap.css" rel='stylesheet' type='text/css' />
-		<script src="../js/jquery.min.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
+<br>
+<hr>
+<h3 class="center">I'm currently learning to build a Rails API.</h3>
+<h4 class="center">Ever hear someone say something would make a great band name?</h4>
+<div id="apiResult" class="center">
+
+
+</div>
+<br>
+<form id="bandNameForm">
+	<div class="center">
+		Band Name:<input id="bandName"></input>
 		<br>
-		<hr>
-		<h3 class="center">I am currently testing a little photo flipping effect using jQuery!</h3>
-		<div class="center">
-			<img id="ericGarretPic" height="300" width="300" src="../images/ericandgarret.jpg">
-			<br>
-			<label>Speed</label>
-			<input id="speed"></input>ms
-			<br>
-			<label>Degree</label>
-			<input id="degs"></input>deg
-			<br>
-			<button class="button info" id="flipButton">Flip photo</button>
-		</div>
-		<hr>
-	</body>
-	<script src="../js/imageflip.js"></script>
-</html>
+		Who said it:<input id="submitter"></input>
+		<br>
+  	<button type='submit' class='disabled button info' id="submit" text="Add your band name!">Add your band name!</button>
+  </div>
+</form>
+  <div class="center">Currently this page performs a GET request from a Heroku-hosted Rails API.<br> The next step will be to allow a POST to the database from the above form.
+<hr>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/demo-api.js"></script>
+
 

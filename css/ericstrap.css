@@ -259,4 +259,13 @@ transform:translate3d(0,0,0);
 	transition:all 0.3s;
 }
 
-
+.disabled {
+	opacity:0.1!important;
+	background-color:#000!important;
+	border-color:#000!important;
+}
+.disabled:hover {
+		opacity:0.1!important;
+		background-color:#000!important;
+		border-color:#000!important;
+}

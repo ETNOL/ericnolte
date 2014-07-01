@@ -65,6 +65,13 @@
 		}
 	})
 
+	app.directive("imageFlip", function() {
+		return {
+			restrict:"E",
+			templateUrl:"../projects/imageflip.html"
+		}
+	})
+
 	app.controller("BodyController", function() {
 		var self = this;
 		this.main = "index";
@@ -136,7 +143,17 @@
 			return this.main === "testpage";
 		}
 
-	});
+		this.setImageFlip = function() {
+				this.fade = "no-fade";
+				this.main = "imageflip";
+				this.sidemenu = "sideMenuClose";
+			}
+
+		this.imageFlip = function() {
+			return this.main === "imageflip";
+		}
+
+		});
 
 
 	app.controller("EricularController", function(){
