@@ -1,16 +1,23 @@
 var counter = 0;
 var GET_bandNames= "http://rocky-refuge-9609.herokuapp.com/band_names";
 var POST_bandName = "";
+var APIfail = function() {
+	$('#apiResult').text("Woops! Something went wrong!  Try to reloading the page.")
+};
 var band_names = $.getJSON( GET_bandNames ).done(
 		function( json ) {
 		band_names = json;
 		setBandName(counter, json);
+		setInterval(function() {setBandName(counter, band_names)}, 2000);
   	console.log("API request successful");
-  	}).fail(
-  	function() {
-  	$('#apiResult').text("Woops! Something went wrong!  Try to reloading the page.")
-  });
+  	}).fail(APIfail());
 
+
+
+function counterAdvance(array) {
+	if (array.length -1 > counter) {counter++}
+	else { counter = 0}
+}
 
 var setBandName = function (arrayCell, json) {
 		this.arrayCell = arrayCell;
@@ -20,12 +27,11 @@ var setBandName = function (arrayCell, json) {
 				"<br> Submitted by: " + json[arrayCell].submitter );
 				$('#apiResult').fadeIn('slow');
 			 });
-		if (json.length - 1 > counter) {counter++}
-		else { counter = 0 }
+		counterAdvance(json);
 }
 
 
-setInterval(function() {setBandName(counter, band_names)}, 2000);
+
 
 var submitNewName = function () {
 	var newName = $("#bandName").val();
