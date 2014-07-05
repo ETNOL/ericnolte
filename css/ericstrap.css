@@ -199,13 +199,13 @@ nav a {
 }
 
 .info {
-	border-color:#71C8C0;
-	background-color:#81D8D0;
+	border-color:#42A6DD;
+	background-color:#42A6DD;
 }
 
 .info:hover {
-	border-color:#333;
-	background-color:#88DFD7;
+	border-color:#64B7EE;
+	background-color:#64B7EE;
 }
 .warning {
 		border-color:#af3b55;
