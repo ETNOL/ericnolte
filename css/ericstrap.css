@@ -12,13 +12,11 @@ body {
   }
 
 nav {
-  width:90%;
-  border:1px solid #262F34;
-  border-radius:3px;
+  width:100%;
 	background-color:#262F34;
 	color:#eee;
 	margin: 0 auto;
-	padding:0.5em 0.5em 0.8em 0;
+	padding:0.8em 0.8em 0.8em 0;
 	overflow:hidden;
 	position: relative;
 	font-size:1.2em;
@@ -58,9 +56,14 @@ ul li a:hover {
 	z-index:100;
 	width:300px;
 	height:100%;
-	background-color:#77BA3B;
+	background-color:rgba(119, 186, 59, 0.95);
 	transition:all 0.5s;
 	color:#262F34;
+	border-right:1px solid rgba(109,176,49,1);
+}
+
+#sideMenu br {
+	border-top:5px solid rgba(9,176,49,1);
 }
 
 #sideMenu ul li {
@@ -99,7 +102,7 @@ ul {
 	padding:0.5em 0em 1em 1em;
 	font-size:0.9em;
 	clear:both;
-	width:90%;
+	width:100%;
 	margin:0 auto;
 }
 
@@ -321,3 +324,6 @@ transform:translate3d(0,0,0);
 	border-bottom: 2px solid #152F34;
 }
 
+.side-border {
+	border-top:5px dashed #152F34;
+}

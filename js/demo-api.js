@@ -1,10 +1,10 @@
 var counter = 0;
-var GET_bandNames= "http://rocky-refuge-9609.herokuapp.com/band_names";
-var POST_bandName = "";
+var bandNamesAPI = "http://rocky-refuge-9609.herokuapp.com/band_names";
+
 var APIfail = function() {
 	$('#apiResult').text("Woops! Something went wrong!  Try to reloading the page.")
 };
-var band_names = $.getJSON( GET_bandNames ).done(
+var band_names = $.getJSON( bandNamesAPI ).done(
 		function( json ) {
 		band_names = json;
 		setBandName(counter, json);
@@ -24,7 +24,7 @@ var setBandName = function (arrayCell, json) {
 		this.json = json;
 		$('#apiResult').fadeOut('slow', function() {
 			$( '#apiResult' ).html( "Band name: "+ json[arrayCell].name +
-				"<br> Submitted by: " + json[arrayCell].submitter );
+				"<br> Stumbled upon by: " + json[arrayCell].submitter );
 				$('#apiResult').fadeIn('slow');
 			 });
 		counterAdvance(json);
@@ -33,16 +33,22 @@ var setBandName = function (arrayCell, json) {
 
 
 
-var submitNewName = function () {
-	var newName = $("#bandName").val();
-	var newSubmitter = $('#submitter').val();
-	$.ajax({
-		type:"POST",
-		url:POST_bandName,
-		data: { name:newName, submitter:newSubmitter }
-	}).done(function () {
-		$("#bandNameForm").hide();
-	});
-};
 
 
+$('#band_submit').click(function() {
+		console.log("Clicked!");
+    var values = $('#bandNameForm').serialize();
+    $.ajax({
+        url: bandNamesAPI,
+        data: values,
+        type:"POST",
+        dataType: "JSON"
+    }).success(function(json){
+    		console.log(json);
+        console.log("successful");
+        band_names = json;
+        counter = json.length - 1;
+
+    });
+    return false; // prevents normal behaviour
+});

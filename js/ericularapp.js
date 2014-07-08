@@ -72,6 +72,13 @@
 		}
 	})
 
+	app.directive("apiDemo", function(){
+		return {
+			restrict:"E",
+			templateUrl:"../projects/APIdemo.html"
+		};
+	});
+
 	app.controller("BodyController", function() {
 		var self = this;
 		this.main = "index";
@@ -153,6 +160,15 @@
 			return this.main === "imageflip";
 		}
 
+		this.setAPIDemo = function() {
+				this.fade = "no-fade";
+				this.main = "apidemo";
+				this.sidemenu = "sideMenuClose";
+			}
+
+		this.apiDemo = function() {
+			return this.main === "apidemo";
+		}
 		});
 
 
