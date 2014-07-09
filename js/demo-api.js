@@ -36,7 +36,11 @@ var setBandName = function (arrayCell, json) {
 
 
 $('#band_submit').click(function() {
-		console.log("Clicked!");
+
+		if ($("#bandName").val() === "" || $('#stumbler').val() === "" ) {
+			return alert("Please fill out all fields!");
+		}
+
     var values = $('#bandNameForm').serialize();
     $.ajax({
         url: bandNamesAPI,
