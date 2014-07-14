@@ -20,6 +20,7 @@ nav {
 	overflow:hidden;
 	position: relative;
 	font-size:1.2em;
+	box-shadow: 0 2px 5px rgba(17,17,17,.5);
 }
 
 .title a {
@@ -27,6 +28,7 @@ nav {
   font-family:'Lato', sans-serif;
   font-weight:100;
 	font-size:1.2em;
+	letter-spacing: 1px;
 }
 
 ul li a {
@@ -47,6 +49,7 @@ ul li a:hover {
 	background-size:;
   display:inline-block;
   padding: 0.5em 0.5em 1.5em 0.5em;
+  box-shadow: 0 2px 5px rgba(17,17,17,.5);
 }
 
 #sideMenu {
@@ -60,6 +63,7 @@ ul li a:hover {
 	transition:all 0.5s;
 	color:#262F34;
 	border-right:1px solid rgba(109,176,49,1);
+	box-shadow: 0 2px 5px rgba(17,17,17,.5);
 }
 
 #sideMenu br {
@@ -96,9 +100,13 @@ ul {
 }
 
 
+#footer-border {
+	border-top: 5px solid #333;
+	box-shadow: 0 2px 5px rgba(17,17,17,.5);
+	width:100%;
+}
 
 .footer {
-	border-top: 5px solid #333;
 	padding:0.5em 0em 1em 1em;
 	font-size:0.9em;
 	clear:both;
@@ -155,6 +163,7 @@ nav a {
 	padding:2% 2% 0 2%;
 	margin:0 auto;
 	font-size:1.1em;
+	letter-spacing: -1px;
 
 }
 .button {
@@ -327,3 +336,5 @@ transform:translate3d(0,0,0);
 .side-border {
 	border-top:5px dashed #152F34;
 }
+
+
