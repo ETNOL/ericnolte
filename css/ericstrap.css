@@ -337,4 +337,7 @@ transform:translate3d(0,0,0);
 	border-top:5px dashed #152F34;
 }
 
+.kill-left-pad {
+	padding-left:0px!important;
+}
 
