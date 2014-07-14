@@ -174,12 +174,12 @@
 
 	app.controller("EricularController", function(){
 
-		this.form = "Type here to change the right paragraph!";
-		this.text = "Click to change!";
+		this.form = "Live preview!";
+		this.text = "Content before click...";
 		this.password ="The password is...";
 		this.option = false;
 		this.changeText = function(){
-			this.text = "You triggered a callback!";
+			this.text = "Content after click!";
 			console.log("Form clear callback has been called");
 		};
 
