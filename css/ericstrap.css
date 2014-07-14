@@ -46,7 +46,6 @@ ul li a:hover {
 	border: 1px solid #152F34;
 	border-radius:3px;
 	background-color:#262F34;
-	background-size:;
   display:inline-block;
   padding: 0.5em 0.5em 1.5em 0.5em;
   box-shadow: 0 2px 5px rgba(17,17,17,.5);
@@ -112,10 +111,6 @@ ul {
 	clear:both;
 	width:100%;
 	margin:0 auto;
-}
-
-.photo img {
-	border: 1px solid #152F34;
 }
 
 .resize {
@@ -341,3 +336,15 @@ transform:translate3d(0,0,0);
 	padding-left:0px!important;
 }
 
+@media (max-width: 400px) {
+	.photo {
+	border: 1px solid #152F34;
+	border-radius:3px;
+	background-color:#262F34;
+  display:inline-block;
+  padding:0!important;
+  margin:0 auto!important;
+  box-shadow: 0 2px 5px rgba(17,17,17,.5);
+
+}
+}
