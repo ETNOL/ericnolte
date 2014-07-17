@@ -61,8 +61,8 @@ ul li a:hover {
 	background-color:rgba(119, 186, 59, 0.95);
 	transition:all 0.5s;
 	color:#262F34;
-	border-right:1px solid rgba(109,176,49,1);
-	box-shadow: 0 2px 5px rgba(17,17,17,.5);
+	border-right:2px solid rgba(17,17,17,0.2);
+	box-shadow: 0 -2px 7px rgba(17,17,17,.5);
 }
 
 #sideMenu br {
