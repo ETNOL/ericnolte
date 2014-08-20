@@ -73,6 +73,7 @@ ul li a:hover {
 	color:#262F34;
 }
 #sideMenu ul li a {
+	padding-right:0.5em;
 	color:#FFF;
 	font-style:normal;
 }
@@ -128,6 +129,11 @@ a {
 	color: #F15B2A;
 	text-decoration: none;
 	font-style:italic;
+}
+
+
+.that-blue {
+	color:#42A6DD;
 }
 
 a:hover {
