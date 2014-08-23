@@ -79,6 +79,13 @@
 		};
 	});
 
+	app.directive("btfScripts", function() {
+		return {
+			restrict:"E",
+			templateUrl:"../layouts/btfScripts.html"
+		};
+	});
+
 	app.controller("BodyController", function() {
 		var self = this;
 		this.main = "index";
