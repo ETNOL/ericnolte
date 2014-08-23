@@ -1,0 +1,25 @@
+.angularRed {
+	background-color:rgb(229, 42, 58);
+	border-color:rgb(179, 177, 177);
+}
+
+.angularRed:hover {
+	background-color:rgb(219, 32, 48);
+	border-color:rgb(169, 167, 167);
+}
+
+.box {
+	background-color:#42A6DD;
+	border: 1px solid #152F34;
+	border-left: 2px solid #152F34;
+	border-right: 2px solid #152F34;
+	width:90%!important;
+}
+
+.top-box {
+	border-top: 2px solid #152F34;
+}
+
+.bottom-box {
+	border-bottom: 2px solid #152F34;
+}
