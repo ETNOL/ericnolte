@@ -81,3 +81,9 @@
 .full-pad {
 	padding:0 2em 0 2em;
 }
+
+#myChart {
+    max-width: 90%;
+    height: 20em;
+    margin: 0 auto;
+}

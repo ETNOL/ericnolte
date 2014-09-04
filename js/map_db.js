@@ -1,5 +1,4 @@
 var googleMap = function()  {
-console.log("this fired");
 var viewportWidth = $(window).width();
 var zoomSetting = 4;
 if (viewportWidth < 500) {

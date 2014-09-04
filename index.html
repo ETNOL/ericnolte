@@ -8,8 +8,10 @@
     <link rel='stylesheet' href='../css/styleATF.min.css' type='text/css'>
 <!--     <link rel='stylesheet' href='css/normalize.css' type='text/css'>-->
     <link rel="stylesheet" href="../css/simplegrid.min.css">
-    <script type='text/javascript' src='../js/jquery.min.js'></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'></script>
+    <script type='text/javascript' src='../js/jquery.min.js'></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
   </head>
 
   <body ng-controller="BodyController as body">
@@ -24,10 +26,12 @@
         <image-flip ng-show="body.imageFlip()"></image-flip>
         <api-demo ng-show="body.apiDemo()"></api-demo>
         <test-page ng-show="body.testPage()"></test-page>
+        <my-chart ng-show="body.myChart()" ></my-chart>
         <footer></footer>
         <btf-scripts></btf-scripts>
       </div>
-  <script type='text/javascript' src='js/ericularapp.min.js'></script>
+  <script type='text/javascript' src='js/ericularapp.js'></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+  <script src="js/myChart.js"></script>
   </body>
 </html>

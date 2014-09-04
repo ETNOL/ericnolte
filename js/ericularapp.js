@@ -86,12 +86,20 @@
 		};
 	});
 
+	app.directive("myChart", function() {
+		return {
+			restrict:"E",
+			templateUrl:"../projects/myChart.html"
+		};
+	});
+
 	app.controller("BodyController", function() {
 		var self = this;
 		this.main = "index";
 		this.sidemenu = "sideMenuClose";
 		this.fade = "no-fade";
 		this.mapLoad = false;
+		
 		this.projectsMenu = function() {
 			this.sidemenu = "sideMenuOpen";
 			this.fade = "fade";
@@ -175,6 +183,17 @@
 
 		this.apiDemo = function() {
 			return this.main === "apidemo";
+		}
+
+		this.setMyChart = function() {
+			this.fade = "no-fade";
+			this.main = "myChart";
+			this.sidemenu = "sideMenuClose";
+			loadChart();
+		}
+
+		this.myChart = function() {
+			return this.main === "myChart";
 		}
 		});
 

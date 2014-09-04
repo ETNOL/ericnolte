@@ -4,6 +4,7 @@ var bandNamesAPI = "http://rocky-refuge-9609.herokuapp.com/band_names";
 var APIfail = function() {
 	$('#apiResult').text("Woops! Something went wrong!  Try to reloading the page.")
 };
+
 var band_names = $.getJSON( bandNamesAPI ).done(
 		function( json ) {
 		band_names = json;
@@ -11,8 +12,6 @@ var band_names = $.getJSON( bandNamesAPI ).done(
 		setInterval(function() {setBandName(counter, band_names)}, 2000);
   	console.log("API request successful");
   	}).fail(APIfail());
-
-
 
 function counterAdvance(array) {
 	if (array.length -1 > counter) {counter++}
@@ -29,11 +28,6 @@ var setBandName = function (arrayCell, json) {
 			 });
 		counterAdvance(json);
 }
-
-
-
-
-
 
 $('#band_submit').click(function() {
 
