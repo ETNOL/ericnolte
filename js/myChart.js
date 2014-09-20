@@ -6,7 +6,7 @@ $("#myChart").highcharts({
 
   series: [
    	{
-	  	data:[1, 0, 4, 1, 11], 
+	  	data:[9, 3, 5, 1, 16], 
 	  	stack:0,
 	  	name:"Tracked Progress"
 	  }, {

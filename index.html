@@ -13,6 +13,8 @@
     <script type='text/javascript' src='../js/map_db.js'></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   </head>
 
   <body ng-controller="BodyController as body">
@@ -31,6 +33,10 @@
         <footer></footer>
         <btf-scripts></btf-scripts>
       </div>
+    </div>
+  <script type="text/javascript">
+    $(".fancybox").fancybox();
+  </script>
   <script type='text/javascript' src='js/ericularapp.js'></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
   <script src="js/myChart.js"></script>
