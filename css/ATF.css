@@ -103,6 +103,12 @@ ul {
 	width:100%;
 }
 
+footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+
 .footer {
 	padding:0.5em 0em 1em 1em;
 	font-size:0.9em;
