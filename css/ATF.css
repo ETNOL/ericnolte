@@ -4,7 +4,6 @@
 body {
   width:100%;
   font-family: 'Open Sans', sans-serif;
-  /*font-family: 'Roboto Condensed', sans-serif;*/
   font-color:#262F34;
   font-style:none;
   letter-spacing: 0.0em;
@@ -33,7 +32,7 @@ nav {
 
 ul li a {
   text-decoration: none;
-  font-family:"Montserrat", "Arial";
+  font-family: Helvetica, Arial;
   color:#42A6DD;
   font-size:0.9em;
 }
@@ -247,5 +246,3 @@ transform:translate3d(0,0,0);
   box-shadow: 0 2px 5px rgba(17,17,17,.5);
 	}
 }
-
-
