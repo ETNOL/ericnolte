@@ -5,17 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="stylesheet" href="../lib/octicons/octicons.css">
     <link rel='stylesheet' href='../css/ATF.css' type='text/css'>
     <link rel="stylesheet" href="../css/simplegrid.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'></script>
     <script type='text/javascript' src='../js/jquery.min.js'></script>
-    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
-    <script type='text/javascript' src='../js/map_db.js'></script>
-    <link rel="stylesheet" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   </head>
 
   <body ng-controller="BodyController as body">
+    <!-- If you're viewing this you may be wondering why Angular? Its plays such
+     a small role in this simple site and adds a lot of bloat! Well yes, it does.
+     But at the time, I had a lot more content on this site. It was my personal codepen-like
+     playground. But now I use Codepen for hacking out little ideas instead of this page.
+     So Angular has become a bit of cruft. I've often thought about refactoring it out but
+     its just not a priority for me right now. Sorry for wasting your bandwidth.  -->
     <side-menu></side-menu>
     <div id="fade-wrapper" class={{body.fade}}>
     <nav-bar></nav-bar>
@@ -25,15 +34,11 @@
       <footer></footer>
     </div>
     </div>
-  <link rel="stylesheet" href="../vendor/octicons/octicons.css">
-  <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
-  <script async type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
-  <script async type='text/javascript' src='../js/analytics.js'></script>
-  <script type="text/javascript">
-    $(".fancybox").fancybox();
-  </script>
-  <script type='text/javascript' src='js/ericularapp.js'></script>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+    <script async type='text/javascript' src='../js/analytics.js'></script>
+    <script type="text/javascript">
+      $(".fancybox").fancybox();
+    </script>
+    <script type='text/javascript' src='js/ericularapp.js'></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
   </body>
 </html>

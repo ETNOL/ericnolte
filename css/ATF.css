@@ -51,7 +51,7 @@ ul li a:hover {
 }
 
 #sideMenu {
-	position:absolute;
+	position: fixed;
 	top:0;
 	left:0;
 	z-index:100;
@@ -245,4 +245,40 @@ transform:translate3d(0,0,0);
   margin:0 auto!important;
   box-shadow: 0 2px 5px rgba(17,17,17,.5);
 	}
+}
+/*******
+   map
+********/
+#map-canvas {
+	height:400px;
+	max-height:400px;
+	max-width:800px;
+	margin: 0 auto;
+}
+
+.form {
+	padding:25px;
+	width:800px;
+	margin: 0 auto;
+	color:#444;
+}
+
+#submit {
+  margin-left:2px;
+}
+
+.header {
+	margin: 0 auto;
+	text-align: center;
+	color:#444;
+}
+
+.full-pad {
+	padding:0 2em 0 2em;
+}
+
+#myChart {
+    max-width: 90%;
+    height: 20em;
+    margin: 0 auto;
 }
