@@ -47,6 +47,13 @@
           <a href="https://twitter.com/eric_nolte">Twitter</a>
         </li>
       </ul>
+    <div>P.S. maybe you just came from <span id="referrer">Mars?</span></div>
     </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+	    var referrer = document.referrer
+	    document.querySelector('#referrer').innerText = referrer
+    })
+  </script>
   </body>
 </html>
