@@ -33,3 +33,27 @@ fieldset {
     margin-top: 20px;
   }
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  background: #fefefe;
+  color: #333;
+  padding: 20px 50px 50px;
+}
+
+.modal .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  height: 19px;
+  width: 19px;
+  text-align: center;
+  background: none;
+}
