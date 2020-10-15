@@ -57,3 +57,16 @@ fieldset {
   text-align: center;
   background: none;
 }
+
+.inline-list {
+  display: flex;
+}
+.inline-list > li {
+  display: inline;
+  flex: 1;
+}
+
+dl > dt {
+  font-size: 1.1rem;
+  padding-top: 10px;
+}
