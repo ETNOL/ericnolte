@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>Eric Nolte</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
-    <link href='css/style.css' rel='stylesheet' type='text/css'>
-
+    <title>Eric Nolte</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu+Mono"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
     <main>
       <form>
-      <fieldset>
-        <legend>Info</legend>
-        <label for="name-input">Name</label>
-        <input id="name-input" value="Eric Nolte" type="text" />
-        <label for="profession-input">Profession</label>
-        <input id="profession-input" value="Software Architect" type="text" />
-      </fieldset>
-      <fieldset>
-        <legend>Hobbies</legend>
-        <label for="simracing-input">Sim Racing</label>
-        <input type="checkbox" id="simracing-input" checked/>
-        <label for="banjo-input">Banjo</label>
-        <input type="checkbox" id="banjo-input" checked/>
-        <label for="beekeeping-input">Beekeeping</label>
-        <input type="checkbox" id="beekeeping-input" checked/>
-        <label for="guitar-input">Guitar</label>
-        <input type="checkbox" id="guitar-input" checked/>
-        <label for="gardening-input">Gardening</label>
-        <input type="checkbox" id="gardening-input" checked/>
-        <label for="mycology-input">Mycology</label>
-        <input type="checkbox" id="mycology-input" checked/>
-      </fieldset>
+        <fieldset>
+          <legend>Info</legend>
+          <label for="name-input">Name</label>
+          <input id="name-input" value="Eric Nolte" type="text" disabled />
+          <label for="profession-input">Profession</label>
+          <input
+            id="profession-input"
+            value="Software Architect"
+            type="text"
+            disabled
+          />
+        </fieldset>
+        <fieldset class="inline-list">
+          <legend>Hobbies</legend>
+          <label for="simracing-input">
+            <input type="checkbox" id="simracing-input" checked />
+            Sim Racing
+          </label>
+          <label for="banjo-input">
+            <input type="checkbox" id="banjo-input" checked />
+            Banjo
+          </label>
+          <label for="beekeeping-input">
+            <input type="checkbox" id="beekeeping-input" checked />
+            Beekeeping
+          </label>
+          <label for="guitar-input">
+            <input type="checkbox" id="guitar-input" checked />
+            Guitar
+          </label>
+          <label for="gardening-input">
+            <input type="checkbox" id="gardening-input" checked />
+            Gardening
+          </label>
+          <label for="mycology-input">
+            <input type="checkbox" id="mycology-input" checked />
+            Mycology
+          </label>
+        </fieldset>
       </form>
       <fieldset>
-      <legend>Social</legend>
-      <ul class="inline-list">
-        <li>
-          <a href="mailto:amishe@gmail.com">Email</a>
-        </li>
-        <li>
-          <a href="http://github.com/ETNOL">Github</a>
-        </li>
-        <li>
-          <a href="https://medium.com/@Eric_Nolte">Medium</a>
-        </li>
-        </li>
-        <li>
-          <a href="https://twitter.com/eric_nolte">Twitter</a>
-        </li>
-        <li>
-          <a href='https://www.linkedin.com/in/eric-nolte-28682982/'>Linkedin</a>
-        </li>
-      </ul>
+        <legend>Social</legend>
+        <ul class="inline-list">
+          <li>
+            <a href="http://github.com/ETNOL">Github</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/eric-nolte-28682982/"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="mailto:amishe@gmail.com">Email</a>
+          </li>
+        </ul>
       </fieldset>
       <fieldset>
         <legend>Employment History</legend>
         <div>
-          <h2><a href='https://www.mediavine.com/'>Mediavine</a></h2>
+          <h2><a href="https://www.mediavine.com/">Mediavine</a></h2>
           <dl>
             <dt>Job Title</dt>
             <dd>Software Architect</dd>
@@ -74,6 +93,7 @@
             <dd>Node.js</dd>
             <dd>Varnish / Fastly CDN</dd>
             <dd>Typescript</dd>
+            <dd>Kafka</dd>
             <dd>React/Preact</dd>
             <dd>AWS</dd>
             <dd>Docker</dd>
@@ -81,9 +101,9 @@
             <dd>Postgres</dd>
             <dd>Prebid.js</dd>
             <dd>OpenRTB</dd>
-            <dd>Dabbling in ML through Tensorflow and Brain.js</dd>
+            <dd>Tensorflow</dd>
           </dl>
-          <h2><a href='https://ihsmarkit.com/index.html'>IHS Markit</a></h2>
+          <h2><a href="https://ihsmarkit.com/index.html">IHS Markit</a></h2>
           <dl>
             <dt>Job Title</dt>
             <dd>Front-End Web Developer</dd>
@@ -96,14 +116,12 @@
         </div>
       </fieldset>
 
-
       <div class="modal">
         <button class="close">x</button>
         I respect your privacy.
         <button class="accept-cookies">Accept Cookies</button>
       </div>
-
+    </main>
   </body>
-  <script src="./js/cmp.js"></script>
   <script src="./js/cmp.js"></script>
 </html>

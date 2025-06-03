@@ -60,10 +60,13 @@ fieldset {
 
 .inline-list {
   display: flex;
+  padding-left: 0;
 }
-.inline-list > li {
+.inline-list > li,
+.inline-list > *  {
   display: inline;
   flex: 1;
+  text-align: center;
 }
 
 dl > dt {

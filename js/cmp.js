@@ -1,5 +1,5 @@
 // @ts-check
-var consentKey = 'cookie-consent'
+var consentKey = 'my-cmp-thanks-you'
 checkCmpAcceptCookie()
 
 window.addEventListener('click', function (event) {
@@ -22,7 +22,7 @@ function handleAcceptCookies() {
 }
 
 function handleModalClose() {
-  document.querySelector('.modal').remove()
+  document.querySelector('.modal')?.remove()
 }
 
 function checkCmpAcceptCookie() {
@@ -54,3 +54,4 @@ function parseCookie(str) {
       return acc;
     }, {});
 }
+
